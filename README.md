@@ -2,6 +2,12 @@
 
 This package contains the research group website with its images, styling, fonts, and scripts in separate files. It can be published with GitHub Pages. It does not include a visual editing dashboard.
 
+## September 2026 revision
+
+The site now includes dedicated people.html and news.html pages. The people page contains current members, fourteen member portraits, and an Alumni section. The news page keeps the lab's publication and special-topic updates in one chronological archive. The PhD students are Jing Qiu, Yiwei Duan, Yongkang Zhao, Jiajun Wang, Xi Wang, Houcheng Jiang, and Jingtang Zhou. Jiajun Wang's role has been updated from undergraduate researcher to PhD student. People and news links open these pages within the same website. The principal investigator portrait is smaller on desktop and mobile. Member photos are shown in consistent rectangular cards; the supplied brain logo appears in the header and footer.
+
+If you have already published the static version from an earlier package, upload index.html, people.html, styles.css, app.js, and the complete assets folder to the same publishing location. Commit the updated files. The ZIP itself is not the website: extract it first.
+
 ## Publish a new website
 
 1. Sign in at https://github.com/ using the account that will manage the website.
@@ -18,25 +24,30 @@ GitHub Pages is available for public repositories on GitHub Free. Your public Pa
 
 ## Edit the content online
 
-Sign in to GitHub and open your website repository. Open index.html, click the pencil button, and edit the text you want to change. Commit your changes to the publishing branch; GitHub Pages will publish the update after its deployment finishes. If you use a separate branch, merge its pull request into the publishing branch first.
+Sign in to GitHub and open your website repository. Open index.html for homepage content or people.html for the member directory, click the pencil button, and edit the text you want to change. Commit your changes to the publishing branch; GitHub Pages will publish the update after its deployment finishes. If you use a separate branch, merge its pull request into the publishing branch first.
 
-The section IDs in index.html locate the content:
+The file and section IDs locate the content:
 
-| Content | Find in index.html |
+| Content | File and section |
 | --- | --- |
-| Main introduction | id="home" |
-| Research descriptions | id="research" |
-| Selected publications | id="publications" |
-| PI profile and team members | id="people" |
-| Joining information | id="join" |
-| Contact and footer | id="contact" |
-| Featured preprint | class="latest" |
+| Main introduction | index.html — id="home" |
+| Research descriptions | index.html — id="research" |
+| Selected publications | index.html — id="publications" |
+| PI profile | index.html and people.html — class="pi-profile" |
+| Current members | people.html — id="current-members" |
+| Alumni | people.html — id="alumni" |
+| Lab news archive | news.html — id="news-archive" |
+| Joining information | index.html — id="join" |
+| Contact and footer | index.html — id="contact" |
+| Lab news and latest updates | class="lab-news" (five `.news-item` entries) |
 
 Keep HTML tags, quotation marks, and matching opening/closing elements intact when editing. To change a paper's destination, update its link URL as well as its title. Some papers have both a title link and a circular arrow link; update both URLs.
 
-For images, upload the replacement to the assets folder and update the image's src, alt, width, and height attributes in index.html as needed. Use simple filenames without spaces. The current portrait is assets/guoyang-li.jpg and the conceptual hero is assets/wave-matter.png.
+For images, upload the replacement to the assets folder and update the image's src, alt, width, and height attributes in the corresponding HTML file as needed. Use simple filenames without spaces. The current portrait is assets/guoyang-li.jpg and the conceptual hero is assets/wave-matter.png.
 
-styles.css controls typography, colors, and page layout. app.js handles mobile navigation and the active section indicator. Routine text updates are made in index.html.
+Member photos use the member-portrait class. Keep the width, height, alt, and loading attributes when adding or replacing a portrait. The lab logo is assets/mim-lab-logo.png.
+
+styles.css controls typography, colors, and page layout. app.js handles mobile navigation and the active section indicator. Routine text updates are made in index.html or people.html. To move a person to Alumni, move the entire member <li> element from the current-members list to the list inside id="alumni" and update their role text.
 
 ## If you want a visual dashboard
 
@@ -44,14 +55,16 @@ A content management system such as WordPress provides a signed-in visual editor
 
 ## Files
 
-- index.html: page content and structure
+- index.html: homepage content and structure
+- people.html: PI profile, current members, and alumni
+- news.html: chronological lab update archive
 - styles.css: appearance and responsive layouts
 - app.js: mobile menu and section navigation
 - assets/: local images, font, icon, and font license
 
 ## Sources and licenses
 
-The faculty profile and portrait were checked against https://mech.pku.edu.cn/jzyg/szdw/L/a373c9d3a0cb4d0e8516825bb2719d7d.htm . Team roles and opportunities follow the public lab directory at https://guoyanglee.github.io/mimlab/ . Publication links appear with each article. The ultrafast OCE work is labeled as a preprint.
+The faculty profile and portrait were checked against https://mech.pku.edu.cn/jzyg/szdw/L/a373c9d3a0cb4d0e8516825bb2719d7d.htm . Initial team roles and opportunities came from the public lab directory at https://guoyanglee.github.io/mimlab/ . The September 10, 2026 member changes and fourteen member photographs were supplied by the lab owner. The new People page has no dependency on that former directory. Publication links appear with each article. The ultrafast OCE work is labeled as a preprint.
 
 The hero artwork is AI-generated conceptual artwork, not experimental data. Manrope is redistributed under its bundled Open Font License in assets/FONT-LICENSE.txt. Content was assembled on September 9, 2026.
 

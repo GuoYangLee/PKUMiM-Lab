@@ -32,13 +32,13 @@ document.addEventListener('click', event => {
 const desktop = window.matchMedia('(min-width: 761px)');
 desktop.addEventListener('change', event => { if (event.matches) setMenu(false); });
 
-if ('IntersectionObserver' in window) {
-  const links = Array.from(navigation.querySelectorAll('a[href^="#"]'));
+if ('IntersectionObserver' in window && !navigation.querySelector('[aria-current="page"]')) {
+  const links = Array.from(navigation.querySelectorAll('a[href^="#"], a[data-section]'));
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
       links.forEach(link => {
-        if (link.hash === '#' + entry.target.id) link.setAttribute('aria-current', 'location');
+        if ((link.dataset.section || link.hash.slice(1)) === entry.target.id) link.setAttribute('aria-current', 'location');
         else link.removeAttribute('aria-current');
       });
     });
