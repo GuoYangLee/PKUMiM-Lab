@@ -4,9 +4,9 @@ This package contains the research group website with its images, styling, fonts
 
 ## September 2026 revision
 
-The site now includes dedicated people.html and news.html pages. The people page contains current members, fourteen member portraits, and an Alumni section. The news page keeps the lab's publication and special-topic updates in one chronological archive. The PhD students are Jing Qiu, Yiwei Duan, Yongkang Zhao, Jiajun Wang, Xi Wang, Houcheng Jiang, and Jingtang Zhou. Jiajun Wang's role has been updated from undergraduate researcher to PhD student. People and news links open these pages within the same website. The principal investigator portrait is smaller on desktop and mobile. Member photos are shown in consistent rectangular cards; the supplied brain logo appears in the header and footer.
+The site now includes dedicated people.html, news.html, and publications.html pages. The people page contains current members, fourteen member portraits, and an Alumni section. The news page keeps the lab's publication and special-topic updates in one chronological archive. The publications page lists the lab publications currently curated on the site. The PhD students are Jing Qiu, Yiwei Duan, Yongkang Zhao, Jiajun Wang, Xi Wang, Houcheng Jiang, and Jingtang Zhou. Jiajun Wang's role has been updated from undergraduate researcher to PhD student. People, news, and publication links open these pages within the same website. The principal investigator portrait is smaller on desktop and mobile. Member photos are shown in consistent rectangular cards; the supplied brain logo appears in the header and footer.
 
-If you have already published the static version from an earlier package, upload index.html, people.html, styles.css, app.js, and the complete assets folder to the same publishing location. Commit the updated files. The ZIP itself is not the website: extract it first.
+If you have already published the static version from an earlier package, upload index.html, people.html, news.html, publications.html, styles.css, app.js, and the complete assets folder to the same publishing location. Commit the updated files. The ZIP itself is not the website: extract it first.
 
 ## Publish a new website
 
@@ -33,6 +33,7 @@ The file and section IDs locate the content:
 | Main introduction | index.html — id="home" |
 | Research descriptions | index.html — id="research" |
 | Selected publications | index.html — id="publications" |
+| All publications | publications.html — id="all-publications" |
 | PI profile | index.html and people.html — class="pi-profile" |
 | Current members | people.html — id="current-members" |
 | Alumni | people.html — id="alumni" |
@@ -58,6 +59,7 @@ A content management system such as WordPress provides a signed-in visual editor
 - index.html: homepage content and structure
 - people.html: PI profile, current members, and alumni
 - news.html: chronological lab update archive
+- publications.html: publication list
 - styles.css: appearance and responsive layouts
 - app.js: mobile menu and section navigation
 - assets/: local images, font, icon, and font license
