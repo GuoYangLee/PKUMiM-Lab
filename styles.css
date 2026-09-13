@@ -76,9 +76,9 @@ a:focus-visible,button:focus-visible{outline:3px solid #ba4c65;outline-offset:6p
 .news-body h3 a:hover{color:var(--red)}
 .news-body p{font-size:13px;color:var(--muted);line-height:1.65;margin-top:6px;max-width:780px}
 .news-link{white-space:nowrap}
-.research-figure{margin:28px 0 0;background:var(--soft);border:1px solid var(--line);padding:12px}
+.research-figure{margin:28px 0 0;background:#fff;border:1px solid var(--line);padding:12px}
 .research-figure.is-placeholder{min-height:180px}
-.research-figure svg{display:block;width:100%;height:auto}
+.research-figure img,.research-figure svg{display:block;width:100%;height:auto}
 .research-figure .figure-label{font-family:var(--sans);font-size:13px;fill:var(--muted);letter-spacing:.15px}
 .research-figure figcaption{font-size:12px;line-height:1.5;color:var(--muted);padding-top:8px}
 .news-page{padding-top:80px}
