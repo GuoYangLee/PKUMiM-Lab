@@ -44,7 +44,9 @@ The file and section IDs locate the content:
 
 Keep HTML tags, quotation marks, and matching opening/closing elements intact when editing. To change a paper's destination, update its link URL as well as its title. Some papers have both a title link and a circular arrow link; update both URLs.
 
-For images, upload the replacement to the assets folder and update the image's src, alt, width, and height attributes in the corresponding HTML file as needed. Use simple filenames without spaces. The current portrait is assets/guoyang-li.jpg and the conceptual hero is assets/wave-matter.png.
+For new paper acceptance announcements, always use the category `New papers` and state the acceptance in the body. Give each new announcement its full posting date, such as `September 13, 2026`, and set the matching `datetime` attribute to `2026-09-13`. Update both index.html and news.html. Keep the five newest items on the homepage and retain all items in the news archive. Older entries with an unknown announcement day retain their original date precision.
+
+For images, upload the replacement to the assets folder and update the image's src, alt, width, and height attributes in the corresponding HTML file as needed. Use simple filenames without spaces. The current portrait is assets/guoyang-li.jpg and the homepage cover is assets/cover.png. The cover is shown at its natural aspect ratio without cropping.
 
 Member photos use the member-portrait class. Keep the width, height, alt, and loading attributes when adding or replacing a portrait. The lab logo is assets/mim-lab-logo.png.
 
@@ -68,7 +70,7 @@ A content management system such as WordPress provides a signed-in visual editor
 
 The faculty profile and portrait were checked against https://mech.pku.edu.cn/jzyg/szdw/L/a373c9d3a0cb4d0e8516825bb2719d7d.htm . Initial team roles and opportunities came from the public lab directory at https://guoyanglee.github.io/mimlab/ . The September 10, 2026 member changes and fourteen member photographs were supplied by the lab owner. The new People page has no dependency on that former directory. Publication links appear with each article. The ultrafast OCE work is labeled as a preprint.
 
-The hero artwork is AI-generated conceptual artwork, not experimental data. Manrope is redistributed under its bundled Open Font License in assets/FONT-LICENSE.txt. Content was assembled on September 9, 2026.
+The homepage cover is the original figure supplied by the lab owner. Manrope is redistributed under its bundled Open Font License in assets/FONT-LICENSE.txt. Content was assembled on September 9, 2026.
 
 ## Official instructions
 
